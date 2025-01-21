@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Variable Modification Example</title>
+    <script>
+        function modifyLet() {
+            let number = 10; // Initial value
+            alert('Initial value of let variable: ' + number);
+            number = 20; // Changing the value
+            alert('Modified value of let variable: ' + number);
+        }
+
+        function modifyConst() {
+            const number = 10; // Initial value
+            alert('Initial value of const variable: ' + number);
+            // number = 20; // Uncommenting this line will cause an error
+            alert('Cannot modify a const variable!');
+        }
+    </script>
+</head>
+<body>
+    <h1>Variable Modification Examples</h1>
+    <button onclick="modifyLet()">Modify let Variable</button>
+    <button onclick="modifyConst()">Modify const Variable</button>
+</body>
+</html>
