@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Example</title>
+    <style>
+        #text {
+            font-size: 20px;
+            color: blue;
+        }
+    </style>
+    <script>
+        function changeText() {
+            // Select the element by ID
+            const textElement = document.getElementById('text');
+            
+            // Change the content of the element
+            textElement.textContent = 'The text has been changed!';
+            
+            // Change the style of the element
+            textElement.style.color = 'red';
+        }
+    </script>
+</head>
+<body>
+    <h1>DOM Manipulation Example</h1>
+    <p id="text">This is the original text.</p>
+    <button onclick="changeText()">Change Text</button>
+</body>
+</html>
