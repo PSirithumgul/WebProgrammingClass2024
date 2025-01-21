@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Example</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const submitButton = document.getElementById('submit');
+
+            submitButton.addEventListener('click', function () {
+                // Get all radio buttons
+                const options = document.getElementsByName('quiz');
+                let selectedOption = null;
+
+                // Check which option is selected
+                for (const option of options) {
+                    if (option.checked) {
+                        selectedOption = option.value;
+                        break;
+                    }
+                }
+
+                // Check the answer
+                if (selectedOption) {
+                    if (selectedOption === 'correct') {
+                        alert('Correct! Great job.');
+                    } else {
+                        alert('Incorrect. Try again.');
+                    }
+                } else {
+                    alert('Please select an option before submitting.');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Quiz: What is 2 + 2?</h1>
+    <form>
+        <label>
+            <input type="radio" name="quiz" value="incorrect"> 3
+        </label><br>
+        <label>
+            <input type="radio" name="quiz" value="incorrect"> 5
+        </label><br>
+        <label>
+            <input type="radio" name="quiz" value="correct"> 4
+        </label><br>
+        <label>
+            <input type="radio" name="quiz" value="incorrect"> 6
+        </label><br><br>
+        <button type="button" id="submit">Submit</button>
+    </form>
+</body>
+</html>
